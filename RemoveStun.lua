@@ -37,7 +37,7 @@ if getgenv().RemoveStun == true then return end
 for _, child in pairs(targetFolder:GetChildren()) do
     if blacklist[child.Name] then
         child:Destroy()
-        print("Removed existing: " .. child.Name)
+        --print("Removed existing: " .. child.Name)
     end
 end
 
@@ -46,7 +46,7 @@ targetFolder.ChildAdded:Connect(function(child)
 	task.wait()
     if blacklist[child.Name] then
         child:Destroy()
-        print("Removed instantly: " .. child.Name)
+        --print("Removed instantly: " .. child.Name)
     end
 end)
 getgenv().RemoveStun = true
