@@ -1,6 +1,8 @@
 local player = game.Players.LocalPlayer
 local targetFolder = workspace:WaitForChild("Live"):WaitForChild(player.Name)
 
+
+
 local blacklist = {
     ["ForwardDashCD"] = true,
     ["DashCD"] = true,
@@ -30,7 +32,7 @@ local blacklist = {
 	["IFrame"] = true,
 
 	}
-
+if getgenv().RemoveStun == true then return end
 -- Remove existing bad instances just in case
 for _, child in pairs(targetFolder:GetChildren()) do
     if blacklist[child.Name] then
