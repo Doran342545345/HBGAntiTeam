@@ -1,7 +1,7 @@
 local player = game.Players.LocalPlayer
 local targetFolder = workspace:WaitForChild("Live"):WaitForChild(player.Name)
 
-getgenv().RemoveStun = nil
+
 
 local blacklist = {
     ["ForwardDashCD"] = true,
